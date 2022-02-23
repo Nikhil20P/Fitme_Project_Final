@@ -1,0 +1,139 @@
+ <form action="" class="background">
+     <br>
+     <br>
+     <br>
+   
+    <h1 class="page" style="color: orange; text-align: center;">[Create Member]</h1>
+    <br><br>
+<div>
+    
+    <mat-form-field class="name" appearance="outline"  fxFlex="30">
+        <mat-label style="color: black;">Name</mat-label>
+        <input matInput type="text"   [(ngModel)]="memberCredential.name" [ngModelOptions]="{standalone: true}" ngth="4" placeholder="Name" maxlength="15" pattern="[a-zA-Z ]*">  
+    </mat-form-field>
+
+
+    <mat-form-field class="email" appearance="outline"  fxFlex="30">
+        <mat-label style="color: black;">Email</mat-label>
+        <input matInput type="email"   [(ngModel)]="memberCredential.email" [ngModelOptions]="{standalone: true}" ngth="4"  placeholder="email" maxlength="40" pattern="[a-zA-Z]+.+@+[a-zA-Z]+\.com+" >  
+    </mat-form-field>
+
+    <mat-form-field class="contact" appearance="outline"  fxFlex="30">
+        <mat-label style="color: black;">Contact</mat-label>
+        <input matInput    [(ngModel)]="memberCredential.mobileNumber" [ngModelOptions]="{standalone: true}" ngth="4"  placeholder="contact"  onKeyPress="if(this.value.length==10) return false;">  
+    </mat-form-field>   
+  
+
+  
+</div>
+<div>
+    <!-- <mat-form-field class="gender" appearance="outline"  fxFlex="30">
+        <mat-label style="color: black;">Gender</mat-label>
+        <input matInput type="text" required [(ngModel)]="memberCredential.gender" [ngModelOptions]="{standalone: true}" ngth="4"  placeholder="gender">  
+    </mat-form-field> -->
+
+
+ <mat-form-field class="gender" appearance="outline"  fxFlex="30">
+            <mat-label style="color: black;">Gender</mat-label>
+            <mat-select  [(ngModel)]="memberCredential.gender" [ngModelOptions]="{standalone: true}">
+             <mat-option value="Male">Male</mat-option>
+            <mat-option value="Female">Female</mat-option>
+             <mat-option value="Other">Other</mat-option>
+            </mat-select>
+    </mat-form-field> 
+
+
+    <mat-form-field class="height" appearance="outline"  fxFlex="30">
+        <mat-label style="color: black;">Height</mat-label>
+        <input matInput type="text" [(ngModel)]="memberCredential.height" [ngModelOptions]="{standalone: true}" ngth="4"  placeholder="height(in fit(ex=4))" maxlength="3" >  
+    </mat-form-field>
+    
+    <mat-form-field class="weight" appearance="outline"  fxFlex="30">
+        <mat-label style="color: black;">Weight</mat-label>
+        <input matInput type="text"  [(ngModel)]="memberCredential.weight" [ngModelOptions]="{standalone: true}" ngth="4"  placeholder="weight" maxlength="5">  
+    </mat-form-field>
+</div>
+<div>
+    <mat-form-field class="age" appearance="outline"  fxFlex="30">
+        <mat-label style="color: black;">Age</mat-label>
+        <input matInput type="number"  [(ngModel)]="memberCredential.age" [ngModelOptions]="{standalone: true}" ngth="4" placeholder="age" onKeyPress="if(this.value.length==3) return false;">  
+    </mat-form-field>
+    
+    <mat-form-field class="joiningDate" appearance="outline"  fxFlex="30">
+        <mat-label style="color: black;">JoiningDate</mat-label>
+        <input matInput type="date"    [(ngModel)]="memberCredential.joiningDate" [ngModelOptions]="{standalone: true}"  ngth="4" placeholder="joiningDate">  
+    </mat-form-field>
+    
+    <!-- <mat-form-field class="status" appearance="outline"  fxFlex="30">
+        <mat-label style="color: black;">status</mat-label>
+        <input matInput type="datetime" required ngth="4" pattern="^[A-Za-z_ ]*" placeholder="status">  
+    </mat-form-field> -->
+
+    <mat-form-field class="status" appearance="outline"  fxFlex="30">
+        <mat-label style="color: black;">Status</mat-label>
+        <mat-select  [(ngModel)]="memberCredential.status" [ngModelOptions]="{standalone: true}">
+            <mat-option value="Active">Active</mat-option>
+            <mat-option value="InActive">InActive</mat-option>
+          </mat-select>
+    </mat-form-field>
+
+    
+
+
+</div>
+<div>
+    <!-- <mat-form-field class="gymplan" appearance="outline"  fxFlex="30">
+        <mat-label style="color: black;">gymplan</mat-label>
+        <input matInput type="text" required ngth="4" pattern="^[A-Za-z_ ]*" placeholder="gymplan">  
+    </mat-form-field> -->
+
+
+     <mat-form-field class="gymplan" appearance="outline"  fxFlex="30">
+        <mat-label style="color: black;">Gymplan</mat-label>
+        <mat-select [(ngModel)]="memberCredential.gymplan"  [ngModelOptions]="{standalone: true}">
+            <mat-option *ngFor="let gymplan of ELEMENT_DATA" [value]="gymplan">
+            {{gymplan.name}}
+            </mat-option>
+          </mat-select>
+
+    </mat-form-field> 
+
+
+
+    <!-- <mat-form-field class="gymplan"  appearance="outline" fxFlex="30">
+        <mat-label style="color: black;">GymPlan</mat-label>
+        <input matInput type="text"  [(ngModel)]="memberCredential.gymplan" [ngModelOptions]="{standalone: true}" ngth="4"  placeholder="gymplam">  
+    </mat-form-field> -->
+
+
+ 
+     <!-- <mat-form-field class="gymplan" appearance="outline"  fxFlex="30">
+        <mat-label style="color: black;">gymplan</mat-label>
+        <mat-select required [(ngModel)]="memberCredential.gymplan" [ngModelOptions]="{standalone: true}">
+            <mat-option value="Silver">Silver</mat-option>
+            <mat-option value="Gold">Gold</mat-option>
+            <mat-option value="Diamond">Diamond</mat-option>
+          </mat-select>
+    </mat-form-field>  -->
+
+
+
+    <mat-form-field class="address" appearance="outline"  fxFlex="30">
+        <mat-label style="color: black;">Address</mat-label>
+        <input matInput type="text"  [(ngModel)]="memberCredential.address" [ngModelOptions]="{standalone: true}" ngth="4"  placeholder="address" maxlength="25">  
+    </mat-form-field>
+
+    
+    <button mat-flat-button  class="registration-button" (click)="onCreate()" >REGISTR</button>
+    <button  mat-flat-button  class="registration-button" (click)="close()"> CANCEL</button>
+    
+    
+   
+  
+   
+</div> 
+<div> <br><br><br><br><br></div>
+<div>
+
+</div>
+</form> 

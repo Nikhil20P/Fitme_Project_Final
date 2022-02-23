@@ -1,0 +1,23 @@
+table {
+    width: 100%;
+  }
+  .filter-button{
+    width: 9em;
+    height: 3em;
+    border-radius: 0.5em;
+    background-color: skyblue;
+    font-weight: 600;
+    cursor: pointer;
+    opacity: 60%;
+    margin-top: 1em;
+   
+  }
+  /* .list{
+    background-image: url("../../assets/list.jpeg");
+  } */
+  .filter-button{
+    background-color: chocolate;
+  }
+  /* .filter{
+    background-image: url("../../assets/list.jpeg");
+  } */

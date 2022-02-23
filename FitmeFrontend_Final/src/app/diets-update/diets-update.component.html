@@ -1,0 +1,19 @@
+<br>
+<fieldset><legend style="font-size: 20px">Diets-PLAN</legend>
+<form class="create-membership-body">
+   
+    <div fxLayout="row wrap" fxLayoutGap="1.5em" style="margin-left: 1.5em;">
+    
+        <mat-form-field class="create-membership-body-input" appearance="outline"  fxFlex="30">
+            <mat-label style="color: black;">Calorie</mat-label>
+            <input matInput required  type="number" [(ngModel)]="dietCredential.calorie" [ngModelOptions]="{standalone: true}" placeholder="Calorie" minlength="4" pattern="^[A-Za-z_ ]*" maxlength="10" onKeyPress="if(this.value.length==10) return false;"> 
+        </mat-form-field>
+        <mat-form-field class="create-membership-body-input" appearance="outline"  fxFlex="30">
+            <mat-label style="color: black;">Diets</mat-label>
+            <input matInput  required  [(ngModel)]="dietCredential.diets" [ngModelOptions]="{standalone: true}" placeholder="Diets" minlength="4" maxlength="" pattern="^(0|[1-9][0-9])$"  maxlength="90" type="text">
+        </mat-form-field>
+    </div>
+    <div style="margin-left: 1.5em;"><button mat-flat-button  class="registration-button" style="color: green;" (click)="onCreate(dietCredential.dietId)" >Update</button> &nbsp;&nbsp;
+    <button mat-flat-button  class="registration-button" style="color: tomato;" (click)="close()"> cancel</button></div>
+</form>
+</fieldset>

@@ -1,0 +1,52 @@
+<form class="diet-deatils-body">
+    <h1 style="text-align: center; color: red;">DIET Calculator</h1>
+    <div fxLayout="row wrap" fxLayoutGap="1.5em" style="margin-left: 1.5em;">
+    
+    <mat-form-field class="diet-deatils-body-body-input" appearance="outline"  fxFlex="30">
+        <mat-label style="color: black;">Height</mat-label>
+        <input matInput type="number" required  [(ngModel)]="dietCredential.height" [ngModelOptions]="{standalone: true}">
+    </mat-form-field>
+    <mat-form-field class="diet-deatils-body-body-input" appearance="outline"  fxFlex="30">
+        <mat-label style="color: black;">Weight</mat-label>
+        <input matInput type="number" required  [(ngModel)]="dietCredential.weight" [ngModelOptions]="{standalone: true}">
+    </mat-form-field>
+    <mat-form-field class="diet-deatils-body-body-input" appearance="outline"  fxFlex="30">
+        <mat-label style="color: black;">Age</mat-label>
+        <input matInput type="number"  required  [(ngModel)]="dietCredential.age" [ngModelOptions]="{standalone: true}">
+    </mat-form-field>
+    </div>
+    <div style="margin-left: 1.5em;margin-bottom: 1.5em;"><button mat-flat-button  class="registration-button" (click)="onCalculate()" >CALCULATE</button></div> 
+
+    <div fxLayout="row wrap" fxLayoutGap="1.5em">
+    
+        <mat-form-field class="diet-deatils-body-body-input" appearance="outline"  fxFlex="30">
+            <mat-label style="color: lightsalmon">Your BMI</mat-label>
+            <input matInput   [(ngModel)]="BMI" [ngModelOptions]="{standalone: true}" [disabled]="true" >
+        </mat-form-field>
+        
+        </div>
+        <div>
+            <mat-form-field class="diet-deatils-body-body-input" appearance="outline"  fxFlex="30">
+            <mat-label style="color: lightsalmon;">Your Ideal Weight</mat-label>
+            <input matInput [(ngModel)]="weight" [ngModelOptions]="{standalone: true}" [disabled]="true" >
+           </mat-form-field>
+       
+        </div>
+
+        <div>
+            <mat-form-field class="diet-deatils-body-body-input" appearance="outline"  fxFlex="30">
+                <mat-label style="color: lightsalmon;">Calorie Needs per Day</mat-label>
+                <input matInput  [(ngModel)]="calorie" [ngModelOptions]="{standalone: true}" [disabled]="true" >
+            </mat-form-field>
+           
+        </div>
+
+
+        <div>
+            <mat-form-field class="diet-deatils-body-body-input" appearance="outline"  fxFlex="30">
+                <mat-label style="color: black;">Diets</mat-label>
+                <input matInput  [(ngModel)]="DIET_DETALS.diets" [ngModelOptions]="{standalone: true}" [disabled]="true" >
+            </mat-form-field>
+        </div>
+       
+</form>

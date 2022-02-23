@@ -1,0 +1,72 @@
+<mat-sidenav-container class="sidenav-container">
+  <mat-sidenav #drawer class="sidenav" fixedInViewport
+      [attr.role]="(isHandset$ | async) ? 'dialog' : 'navigation'"
+      [mode]="(isHandset$ | async) ? 'over' : 'side'"
+      [opened]="(isHandset$ | async) === false">
+    <mat-toolbar class="v" >    Menu   </mat-toolbar>
+    <mat-nav-list class="menu">
+
+      <!-- <a mat-list-item href="#">Link 1</a>
+      <a mat-list-item href="#">Link 2</a>
+      <a mat-list-item href="#">Link 3</a> -->
+     <br><br>
+     <button mat-stroked-button color="accent" routerLink="/dashbord/memberlist" class="v1">Member</button>
+     <br><br>
+     <button mat-stroked-button color="accent" routerLink="/dashbord/gymplan-list" class="v1">Gymplan</button>
+
+      <br><br>
+
+      <button mat-stroked-button color="accent" routerLink="/dashbord/diets-list" class="v1">Diets</button>
+
+      <br><br>
+
+    
+      <button mat-stroked-button color="accent" routerLink="/dashbord/activity-list" class="v1">Activity </button>
+      <br><br>
+      <button mat-stroked-button color="accent" routerLink="/dashbord/diets-calcule" class="v1">Diets Calculator</button>
+      <br><br>
+      <!-- <button mat-stroked-button color="accent" routerLink="/dashbord/gymplan-list" class="v1">Gymplan  Lists</button> -->
+      <br><br>
+      <!-- <button mat-stroked-button color="accent" routerLink="/dashbord/diets-list" class="v1">Diets     Lists</button> -->
+
+
+       <br><br>
+       <!-- <button mat-stroked-button color="accent" routerLink="/dashbord/activity-list" class="v1">Activity     List</button> -->
+       <br><br>
+       <!-- <button mat-stroked-button color="accent" routerLink="/dashbord/diets-calcule" class="v1">Diets Calculator</button> -->
+
+       
+       <br><br>
+
+       <br><br><br><br><br>
+       <div></div>
+
+
+    </mat-nav-list>
+  </mat-sidenav>
+  <mat-sidenav-content>
+    <mat-toolbar color="primary">
+      <button
+        type="button"
+        aria-label="Toggle sidenav"
+        mat-icon-button
+        (click)="drawer.toggle()"
+        *ngIf="isHandset$ | async">
+        <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+      </button>
+      <span >Admin Dashboard</span>
+      <button  mat-stroked-button style="margin-left: 800px; background-color:orange" (click)="logout()">log-out</button>
+    </mat-toolbar >
+    <!-- Add Content Here -->
+    
+    
+
+    <router-outlet></router-outlet>
+
+    
+  </mat-sidenav-content>
+</mat-sidenav-container>
+
+
+
+

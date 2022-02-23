@@ -1,0 +1,41 @@
+<h1 style="text-align: center; color: orange;">Diets-List</h1>
+
+
+<button mat-raised-button (click)="add()">
+    <mat-icon>add_circle_outline</mat-icon>
+</button>
+
+<table mat-table [dataSource]="dataSource" class="list">
+
+    <ng-container matColumnDef="dietId">
+        <th mat-header-cell *matHeaderCellDef> No. </th>
+        <td mat-cell *matCellDef="let element"> {{element.dietId}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="calorie">
+        <th mat-header-cell *matHeaderCellDef> Calorie </th>
+        <td mat-cell *matCellDef="let element"> {{element.calorie}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="diets">
+        <th mat-header-cell *matHeaderCellDef> Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.diets}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="Action">
+        <th mat-header-cell *matHeaderCellDef> Action </th>
+        <td mat-cell *matCellDef="let element">
+        <button mat-raised-button  class="colorButton" (click)="doUpdate(element.dietId)" >
+            <mat-icon>edit</mat-icon>
+        </button>
+        &nbsp;
+        
+            <button mat-fab color="warn" color="primary" (click)="doDelete(element.dietId)" aria-label="Example icon button with a delete icon">
+          <mat-icon >delete</mat-icon>
+        </button>
+        </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+
+</table>

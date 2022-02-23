@@ -1,0 +1,22 @@
+<form action="" class="background">
+    <br><br><br>
+    <h1 style="text-align: center; color: orange;">[Create-Diets]</h1>
+    <br><br>
+    <div>
+        <mat-form-field class="input" appearance="outline"  fxFlex="30">
+            <mat-label style="color: black;">Calorie</mat-label>
+            <input matInput type="number"  [(ngModel)]="dietCredential.calorie" [ngModelOptions]="{standalone: true}"onKeyPress="if(this.value.length==10) return false;" placeholder="Clories">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field class="input1" appearance="outline"  fxFlex="30">
+            <mat-label style="color: black;">Diet</mat-label>
+            <input matInput   [(ngModel)]="dietCredential.diets" [ngModelOptions]="{standalone: true}" type="text" maxlength="60" pattern="[a-zA-Z ]*" placeholder="Diets">
+        </mat-form-field>
+    </div>
+    <div><button mat-flat-button  class="registration-button" (click)="onCreate()" >ADD DIETS</button>
+        <button mat-flat-button  class="registration-button" (click)="close()" >Cancle</button>
+          
+    </div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+</form>

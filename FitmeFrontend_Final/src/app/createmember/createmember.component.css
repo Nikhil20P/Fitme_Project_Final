@@ -1,0 +1,40 @@
+.registration-button{
+    width: 6em;
+    height: 3em;
+    border-radius: 0.5em;
+    background-color: orange;
+    font-weight: 600;
+    cursor: pointer;
+    opacity: 60%;
+    margin-left: 90px;
+
+   
+    margin-top: 10px;
+   
+  }
+  /* .background{
+    background-image: url("../../assets/Createmember.jpg");
+  } */
+  .email{
+    margin-left: 40px;
+  }
+  .contact{
+    margin-left: 40px;
+  }
+  .height{
+    margin-left: 40px;
+  }
+  .weight{
+    margin-left: 40px;
+  }
+
+.joiningDate{
+  margin-left: 40px;
+}
+.status{
+  margin-left: 40px;
+}
+.address{
+  margin-left: 40px;
+}
+

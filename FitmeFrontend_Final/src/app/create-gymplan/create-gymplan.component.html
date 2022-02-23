@@ -1,0 +1,32 @@
+<!-- <p>create-gymplan works!</p> -->
+
+<form action="" class="background">
+    <br><br><br>
+    <h1 style="text-align: center; color: orange;">[Create-GymPlan]</h1>
+    <br><br>
+<div>
+    
+    <mat-form-field class="input1" appearance="outline" color="red" fxFlex="30">
+        <mat-label style="color: black;">Name</mat-label>
+        <input matInput   [(ngModel)]="gymplanCri.name" [ngModelOptions]="{standalone: true}" placeholder="Name"  pattern="[a-zA-Z ]*" maxlength="15"> 
+    </mat-form-field>
+   
+</div>
+<div>
+    <mat-form-field class="input2" appearance="outline"  fxFlex="30">
+        <mat-label style="color: black;">Duration</mat-label>
+        <input matInput [(ngModel)]="gymplanCri.duration" [ngModelOptions]="{standalone: true}" placeholder="Duration" maxlength="15">
+    </mat-form-field>
+</div>
+
+
+    <div>
+        <button mat-flat-button class="registration-button" (click)="onCreate()" >REGISTR</button>
+        <br><br>
+        <button mat-flat-button  class="registration-button" (click)="close()" >Cancle</button>
+
+    </div>
+    <br><br><br><br><br><br><br><br>
+    
+    
+</form>

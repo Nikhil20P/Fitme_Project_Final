@@ -1,0 +1,21 @@
+<form action="" class="background">
+    <br><br><br>
+    <h1 style="text-align: center; color: red;">Create-Activity</h1>
+    <br><br>
+    <div>
+        <mat-form-field class="input" appearance="outline"  fxFlex="30">
+            <mat-label style="color: black;">Day</mat-label>
+            <input matInput type="text"  [(ngModel)]="activityCredential.day" [ngModelOptions]="{standalone: true}"  maxlength="10" pattern="[a-zA-Z ]*" placeholder="day">
+        </mat-form-field>
+    </div>
+    <div>
+        <mat-form-field class="input1" appearance="outline"  fxFlex="30">
+            <mat-label style="color: black;">Workouts</mat-label>
+            <input matInput  [(ngModel)]="activityCredential.workouts" [ngModelOptions]="{standalone: true}" type="text" maxlength="60" pattern="[a-zA-Z ]*" placeholder="workout">
+        </mat-form-field>
+    </div>
+    <div><button mat-flat-button  class="registration-button" (click)="onCreate()" >ADD ACTIVITY</button>
+        <button  mat-flat-button  class="registration-button" (click)="close()"> cancel</button>
+</div>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
+</form>

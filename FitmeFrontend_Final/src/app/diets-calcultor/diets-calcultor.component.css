@@ -1,0 +1,20 @@
+.diet-deatils-body{
+    height: 100%;
+    width: 100%;
+    /* background-image: url("../../assets/calculator.jpg"); */
+    
+
+    
+  }
+
+  .registration-button{
+    width: 9em;
+    height: 3em;
+    border-radius: 0.5em;
+    background-color: orange;
+    font-weight: 600;
+    cursor: pointer;
+    opacity: 60%;
+    margin-left: 450px;
+   
+  }

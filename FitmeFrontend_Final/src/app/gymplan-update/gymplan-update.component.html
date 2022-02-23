@@ -1,0 +1,18 @@
+<br>
+<fieldset><legend style="font-size: 20px">GYM-PLAN</legend>
+<form class="create-membership-body">
+    <div fxLayout="row wrap" fxLayoutGap="1.5em" style="margin-left: 1.5em;">
+    
+        <mat-form-field class="create-membership-body-input" appearance="outline"  fxFlex="30">
+            <mat-label style="color: black;">Name</mat-label>
+            <input matInput required  [(ngModel)]="gymplanCredential.name" [ngModelOptions]="{standalone: true}" placeholder="Name" minlength="4" pattern="^[A-Za-z_ ]*" maxlength="15" > 
+        </mat-form-field>
+        <mat-form-field class="create-membership-body-input" appearance="outline"  fxFlex="30">
+            <mat-label style="color: black;">Duration</mat-label>
+            <input matInput type="text" required  [(ngModel)]="gymplanCredential.duration" [ngModelOptions]="{standalone: true}" placeholder="Duration" minlength="0" maxlength="15" pattern="^(0|[1-9][0-9])$" max="15" >
+        </mat-form-field>
+    </div>
+    <div style="margin-left: 1.5em;"><button mat-flat-button  class="registration-button" style="color: green;" (click)="onCreate(gymplanCredential.gymPlanId)" >Update</button> &nbsp;&nbsp;
+    <button mat-flat-button  class="registration-button" style="color: tomato;" (click)="close()"> cancel</button></div>
+</form>
+</fieldset>

@@ -1,0 +1,21 @@
+.registration-button{
+    width: 6em;
+    height: 3em;
+    border-radius: 0.5em;
+    background-color: orange;
+    font-weight: 600;
+    cursor: pointer;
+    opacity: 60%;
+    margin-left: 500px;
+}
+/* .background{
+    background-image: url("../../assets/gym-plan.jpg");
+} */
+.input1{
+  
+    margin-left: 400px;
+}
+.input2{
+  
+    margin-left: 400px;
+}
